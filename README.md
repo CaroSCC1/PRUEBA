@@ -1,7 +1,7 @@
 # 📊 Reporte de Cargas - Julio
 
 **Fuente de datos:** `Cargas_julio.xlsx`  
-**Última actualización:** `2026-08-26 11:40:30`
+**Última actualización:** `2026-08-26 12:46:40`
 
 ---
 
@@ -9,8 +9,33 @@
 
 | Métrica | Valor |
 | :--- | :--- |
-| **Total de Registros Cargados** | 145 |
-| **Total de Columnas** | 11 |
+| **Total Registros Cargados** | 145 |
+| **Total Recepcionados** | 127,323,273 |
+| **Total Aceptados** | 127,323,273 |
+| **Total Errores** | 902,714 |
+
+---
+
+## 📊 Gráficos Dinámicos Nativo-Markdown (Mermaid)
+
+### 1. Distribución Porcentual por Zona
+```mermaid
+pie title Distribución de Recepcionados por Zona
+    "ANTOFAGASTAUN02" : 757887
+    "ANTOFAGASTAUN03" : 978998
+    "ANTOFAGASTAUN04" : 912630
+    "ANTOFAGASTAUN07" : 1708921
+    "ANTOFAGASTAUN10" : 951000
+```
+
+### 2. Comparativo de Recepcionados por Zona
+```mermaid
+xychart-beta
+    title "Recepcionados por Top Zonas"
+    x-axis ['ANTOFAGASTAUN02', 'ANTOFAGASTAUN03', 'ANTOFAGASTAUN04', 'ANTOFAGASTAUN07', 'ANTOFAGASTAUN10']
+    y-axis "Recepcionados" 0 --> 1708921
+    bar [757887, 978998, 912630, 1708921, 951000]
+```
 
 ---
 
@@ -32,15 +57,15 @@
 
 ## 📑 Muestra de Registros (Top 10)
 
-|    Id | Zona            | Unidad   |   Recepcionados |   Aceptados |   Rechazados |   Errores |   Obs. | Creación            | Modificación   |   Versión |
-|------:|:----------------|:---------|----------------:|------------:|-------------:|----------:|-------:|:--------------------|:---------------|----------:|
-| 11097 | ANTOFAGASTA_UNE | UNE      |         1129188 |     1129188 |            0 |         0 |    nan | 2026-08-06 10:10:00 | NaT            |         0 |
-| 11000 | ANTOFAGASTAUN02 | UN02     |          757887 |      757887 |            0 |        64 |    nan | 2026-08-04 17:06:48 | NaT            |         0 |
-| 11046 | ANTOFAGASTAUN03 | UN03     |          978998 |      978998 |            0 |         1 |    nan | 2026-08-05 14:08:29 | NaT            |         0 |
-| 11088 | ANTOFAGASTAUN04 | UN04     |          912630 |      912630 |            0 |         0 |    nan | 2026-08-05 08:26:18 | NaT            |         0 |
-| 11092 | ANTOFAGASTAUN07 | UN07     |         1708921 |     1708921 |            0 |         0 |    nan | 2026-08-06 09:39:09 | NaT            |         0 |
-| 11054 | ANTOFAGASTAUN10 | UN10     |          951000 |      951000 |            0 |         0 |    nan | 2026-08-02 18:49:16 | NaT            |         0 |
-| 11026 | ANTOFAGASTAUN11 | UN11     |          738396 |      738396 |            0 |         0 |    nan | 2026-08-05 14:08:29 | NaT            |         0 |
-| 11033 | ANTOFAGASTAUN12 | UN12     |          727619 |      727619 |            0 |         0 |    nan | 2026-08-05 11:53:53 | NaT            |         0 |
-| 11034 | ANTOFAGASTAUN14 | UN14     |         1303040 |     1303040 |            0 |         0 |    nan | 2026-08-06 10:30:28 | NaT            |         0 |
-| 11119 | ANTOFAGASTAUN19 | UN19     |         1025664 |     1025664 |            0 |         0 |    nan | 2026-08-03 16:01:57 | NaT            |         0 |
+| Id | Zona | Unidad | Recepcionados | Aceptados | Rechazados | Errores | Obs. | Creación | Modificación | Versión |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 11097 | ANTOFAGASTA_UNE | UNE | 1129188 | 1129188 | 0 | 0 | nan | 2026-08-06 10:10:00 | NaT | 0 |
+| 11000 | ANTOFAGASTAUN02 | UN02 | 757887 | 757887 | 0 | 64 | nan | 2026-08-04 17:06:48 | NaT | 0 |
+| 11046 | ANTOFAGASTAUN03 | UN03 | 978998 | 978998 | 0 | 1 | nan | 2026-08-05 14:08:29 | NaT | 0 |
+| 11088 | ANTOFAGASTAUN04 | UN04 | 912630 | 912630 | 0 | 0 | nan | 2026-08-05 08:26:18 | NaT | 0 |
+| 11092 | ANTOFAGASTAUN07 | UN07 | 1708921 | 1708921 | 0 | 0 | nan | 2026-08-06 09:39:09 | NaT | 0 |
+| 11054 | ANTOFAGASTAUN10 | UN10 | 951000 | 951000 | 0 | 0 | nan | 2026-08-02 18:49:16 | NaT | 0 |
+| 11026 | ANTOFAGASTAUN11 | UN11 | 738396 | 738396 | 0 | 0 | nan | 2026-08-05 14:08:29 | NaT | 0 |
+| 11033 | ANTOFAGASTAUN12 | UN12 | 727619 | 727619 | 0 | 0 | nan | 2026-08-05 11:53:53 | NaT | 0 |
+| 11034 | ANTOFAGASTAUN14 | UN14 | 1303040 | 1303040 | 0 | 0 | nan | 2026-08-06 10:30:28 | NaT | 0 |
+| 11119 | ANTOFAGASTAUN19 | UN19 | 1025664 | 1025664 | 0 | 0 | nan | 2026-08-03 16:01:57 | NaT | 0 |
