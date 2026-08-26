@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Reportería - Julio</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; margin: 0; padding: 20px; color: #333; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .kpi-container { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; }
+        .kpi-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 200px; text-align: center; }
+        .kpi-card h3 { margin: 0 0 10px 0; font-size: 14px; color: #666; }
+        .kpi-card p { margin: 0; font-size: 24px; font-weight: bold; color: #2c3e50; }
+        .chart-container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-width: 800px; margin: 0 auto 30px auto; }
+        .table-container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-width: 1000px; margin: 0 auto; overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; font-size: 14px; }
+        th { background-color: #2c3e50; color: white; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>📊 Dashboard Reportería de Cargas - Julio</h1>
+        <p>Última actualización: 2026-08-26 12:26:52</p>
+    </div>
+
+    <div class="kpi-container">
+        <div class="kpi-card"><h3>Total Registros</h3><p>145</p></div>
+        <div class="kpi-card"><h3>Recepcionados</h3><p>127,323,273</p></div>
+        <div class="kpi-card"><h3>Aceptados</h3><p>127,323,273</p></div>
+        <div class="kpi-card"><h3>Total Errores</h3><p>902,714</p></div>
+    </div>
+
+    <div class="chart-container">
+        <h2>📈 Top Zonas por Recepcionados</h2>
+        <canvas id="zonasChart"></canvas>
+    </div>
+
+    <div class="table-container">
+        <h2>📑 Vista Previa de Registros (Top 10)</h2>
+        <table border="1" class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Id</th>
+      <th>Zona</th>
+      <th>Unidad</th>
+      <th>Recepcionados</th>
+      <th>Aceptados</th>
+      <th>Rechazados</th>
+      <th>Errores</th>
+      <th>Obs.</th>
+      <th>Creación</th>
+      <th>Modificación</th>
+      <th>Versión</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>11097</td>
+      <td>ANTOFAGASTA_UNE</td>
+      <td>UNE</td>
+      <td>1129188</td>
+      <td>1129188</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>2026-08-06 10:10:00</td>
+      <td>NaT</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>11000</td>
+      <td>ANTOFAGASTAUN02</td>
+      <td>UN02</td>
+      <td>757887</td>
+      <td>757887</td>
+      <td>0</td>
+      <td>64</td>
+      <td>NaN</td>
+      <td>2026-08-04 17:06:48</td>
+      <td>NaT</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>11046</td>
+      <td>ANTOFAGASTAUN03</td>
+      <td>UN03</td>
+      <td>978998</td>
+      <td>978998</td>
+      <td>0</td>
+      <td>1</td>
+      <td>NaN</td>
+      <td>2026-08-05 14:08:29</td>
+      <td>NaT</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>11088</td>
+      <td>ANTOFAGASTAUN04</td>
+      <td>UN04</td>
+      <td>912630</td>
+      <td>912630</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>2026-08-05 08:26:18</td>
+      <td>NaT</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>11092</td>
+      <td>ANTOFAGASTAUN07</td>
+      <td>UN07</td>
+      <td>1708921</td>
+      <td>1708921</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>2026-08-06 09:39:09</td>
+      <td>NaT</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>11054</td>
+      <td>ANTOFAGASTAUN10</td>
+      <td>UN10</td>
+      <td>951000</td>
+      <td>951000</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>2026-08-02 18:49:16</td>
+      <td>NaT</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>11026</td>
+      <td>ANTOFAGASTAUN11</td>
+      <td>UN11</td>
+      <td>738396</td>
+      <td>738396</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>2026-08-05 14:08:29</td>
+      <td>NaT</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>11033</td>
+      <td>ANTOFAGASTAUN12</td>
+      <td>UN12</td>
+      <td>727619</td>
+      <td>727619</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>2026-08-05 11:53:53</td>
+      <td>NaT</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>11034</td>
+      <td>ANTOFAGASTAUN14</td>
+      <td>UN14</td>
+      <td>1303040</td>
+      <td>1303040</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>2026-08-06 10:30:28</td>
+      <td>NaT</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>11119</td>
+      <td>ANTOFAGASTAUN19</td>
+      <td>UN19</td>
+      <td>1025664</td>
+      <td>1025664</td>
+      <td>0</td>
+      <td>0</td>
+      <td>NaN</td>
+      <td>2026-08-03 16:01:57</td>
+      <td>NaT</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('zonasChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['ANTOFAGASTAUN02', 'ANTOFAGASTAUN03', 'ANTOFAGASTAUN04', 'ANTOFAGASTAUN07', 'ANTOFAGASTAUN10', 'ANTOFAGASTAUN11', 'ANTOFAGASTAUN12', 'ANTOFAGASTAUN14', 'ANTOFAGASTAUN19', 'ANTOFAGASTAUN21'],
+                datasets: [{
+                    label: 'Recepcionados',
+                    data: [np.int64(757887), np.int64(978998), np.int64(912630), np.int64(1708921), np.int64(951000), np.int64(738396), np.int64(727619), np.int64(1303040), np.int64(1025664), np.int64(1102460)],
+                    backgroundColor: '#3498db',
+                    borderColor: '#2980b9',
+                    borderWidth: 1
+                }]
+            },
+            options: { responsive: true, scales: { y: { beginAtZero: true } } }
+        });
+    </script>
+</body>
+</html>
